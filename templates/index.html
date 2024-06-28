@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h1>Loan Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Gender">Gender:</label><br>
+        <input type="radio" id="Male" name="Gender" value="1">
+        <label for="Male">Male</label><br>
+        <input type="radio" id="Female" name="Gender" value="0">
+        <label for="Female">Female</label><br><br>
+        <label for="Married">Married:</label><br>
+        <input type="radio" id="Yes" name="Married" value="1">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="Married" value="0">
+        <label for="No">No</label><br><br>
+        <label for="Dependents">Dependents:</label><br>
+        <input type="radio" id="0" name="Dependents" value="0">
+        <label for="0">0</label><br>
+        <input type="radio" id="1" name="Dependents" value="1">
+        <label for="1">1</label><br>
+        <input type="radio" id="2" name="Dependents" value="2">
+        <label for="2">2</label><br>
+        <input type="radio" id="3+" name="Dependents" value="3">
+        <label for="3+">3+</label><br><br>
+        <label for="Education">Education:</label><br>
+        <input type="radio" id="Graduate" name="Education" value="1">
+        <label for="Graduate">Graduate</label><br>
+        <input type="radio" id="NotGraduate" name="Education" value="0">
+        <label for="NotGraduate">Not Graduate</label><br><br>
+        <label for="Self_Employed">Self Employed:</label><br>
+        <input type="radio" id="Yes" name="Self_Employed" value="1">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="Self_Employed" value="0">
+        <label for="No">No</label><br><br>
+        <label for="Credit_History">Credit History:</label><br>
+        <input type="radio" id="1" name="Credit_History" value="1">
+        <label for="1">Good</label><br>
+        <input type="radio" id="0" name="Credit_History" value="0">
+        <label for="0">Bad</label><br><br>
+        <label for="Property_Area">Property Area:</label><br>
+        <input type="radio" id="Urban" name="Property_Area" value="2">
+        <label for="Urban">Urban</label><br>
+        <input type="radio" id="Semiurban" name="Property_Area" value="1">
+        <label for="Semiurban">Semiurban</label><br>
+        <input type="radio" id="Rural" name="Property_Area" value="0">
+        <label for="Rural">Rural</label><br><br>
+        <label for="ApplicantIncome">Applicant Income:</label><br>
+        <input type="text" id="ApplicantIncome" name="ApplicantIncome"><br>
+        <label for="CoapplicantIncome">Coapplicant Income:</label><br>
+        <input type="text" id="CoapplicantIncome" name="CoapplicantIncome"><br>
+        <label for="LoanAmount">Loan Amount:</label><br>
+        <input type="text" id="LoanAmount" name="LoanAmount"><br>
+        <label for="Loan_Amount_Term">Loan Amount Term:</label><br>
+        <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term"><br>
+        <input type="submit" value="Predict">
+    </form>
+    <div>
+        <h2>Prediction Result:</h2>
+        <p id="prediction">{{ prediction }}</p>
+    </div>
+</body>
+</html>
